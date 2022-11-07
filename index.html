@@ -15,6 +15,20 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+          <p>Choose what criteria you'd like to be included in your randomly generated password by checking the boxes below.</p>
+          <form id="criteria">
+            <input type="checkbox" id="uppercase" name="uppercase">
+              <label for="uppercase letters">uppercase letters</label> <br>
+            <input type="checkbox" id="special characters">
+              <label for="special characters">special characters</label> <br>
+            <input type="checkbox" id="numbers"> 
+              <label for="numbers">numbers</label> <br>
+            <p>How long would you like your password to be? (Min: 8 characters, max: 128 characters)</p>
+            <input type="range" name="rangeInput" min="8" max="128" step="8" onchange="updateRange(this.value);">
+            <input type="text" id="passLength" value="" height="10px" width="10px"></textarea>
+             <br>
+            <input type="submit" value="Submit">
+          </form>
         </div>
         <div class="card-body">
           <textarea

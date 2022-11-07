@@ -1,3 +1,7 @@
+function updateRange(val) {
+  document.getElementById('passLength').value = val;
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -15,7 +19,6 @@ function generatePassword () {
   // return generatePassword;
   return password.slice(12, 24); //goal: return a 12-character slice of the randomly generated password. The downside to this is that it may or may not always include upper and lowercase, numbers, or special characters.
 }
-
 
 function writePassword() {
   var password = generatePassword();
