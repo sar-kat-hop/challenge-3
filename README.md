@@ -4,7 +4,7 @@
 The purpose of this assignment was to create a random password generator, using JavaScript, allowing users to define criteria (length, inclusion of different character types) and click a button to get a randomly generated password. 
 
 The webpage should look like this:
-Challenge3.png 
+![screenshot of webpage](./assets/Challenge3.png)
 
 ## Installation
 N/A
