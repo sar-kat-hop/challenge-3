@@ -15,18 +15,22 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
-          <p>Choose what criteria you'd like to be included in your randomly generated password by checking the boxes below.</p>
-          <form id="criteria">
-            <input type="checkbox" id="uppercase" name="uppercase">
-              <label for="uppercase letters">uppercase letters</label> <br>
-            <input type="checkbox" id="special characters">
-              <label for="special characters">special characters</label> <br>
-            <input type="checkbox" id="numbers"> 
-              <label for="numbers">numbers</label> <br>
+          <form name="passCriteria" onSubmit="validateForm();">
+            <p>To get a random 12-character password, click the "Generate Password" button below.<br><br>
+            If you'd like to refine your password, complete the form below and hit "Submit" before clicking "Generate Password."</p>
+
+            <h3>Refine Your Password</h3>
             <p>How long would you like your password to be? (Min: 8 characters, max: 128 characters)</p>
-            <input type="range" name="rangeInput" min="8" max="128" step="8" onchange="updateRange(this.value);">
+            <input type="range" name="rangeInput" min="8" max="128" step="8" onchange="updateRange(this.value);" required>
             <input type="text" id="passLength" value="" height="10px" width="10px"></textarea>
-             <br>
+            <br>
+            <p>Check at least 2 of the 3 boxes below to pick what kind of characters you'd like to be generated for your password.</p>
+            <input type="checkbox" id="uppercase" name="uppercase" required>
+              <label for="uppercase letters">uppercase letters</label> <br>
+            <input type="checkbox" id="special characters" required>
+              <label for="special characters">special characters</label> <br>
+            <input type="checkbox" id="numbers" required> 
+              <label for="numbers">numbers</label> <br>
             <input type="submit" value="Submit">
           </form>
         </div>
@@ -39,7 +43,7 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button onclick="writePassword()" id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn" onClick="writePassword();">Generate Password</button>
         </div>
       </div>
       <script src="./assets/script.js"></script>
