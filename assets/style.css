@@ -13,7 +13,7 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Avenir Light', 'Calibri Light', 'Segoe UI', sans-serif; /* Added additional fonts besides sans-serif for better appearance */
   background-color: #f9fbfd;
 }
 
@@ -36,7 +36,7 @@ header {
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
-  font-size: 18px;
+  font-size: 1rem; /* changed from 18px to 1rem for consistency in measurement units across elements */
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
@@ -52,6 +52,28 @@ header {
 
 .card-body {
   min-height: 100px;
+}
+
+/* added styling for form elements */
+form {  
+  padding: 0 20px 20px; 
+  font-size: 0.9rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+input.number {
+  min-width: fit-content;
+  height: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+input.checkbox {
+  width: 20px;
+  height: 20px;
 }
 
 .card-footer {
@@ -74,14 +96,15 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
-  border-radius: 25px;
+  background-color: #1586ac; /* Changed from red to blue for aesthetic purposes */
+  border-radius: 10px; /* Changed from 25 to 10 to make button a "squircle" shape for aesthetic purposes */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
+  font-family: 'Avenir Light', 'Calibri Light', 'Segoe UI', sans-serif; /* Copied font family from body for style consistency */
+  font-size: 1.25rem;
+  line-height: 1.5;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
@@ -91,6 +114,11 @@ header {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+/* added hover styling color change for button */
+button:hover {
+  background-color: #39b9e3;
 }
 
 .float-right {
