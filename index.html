@@ -22,21 +22,19 @@
           <h2>Generate a Password</h2>
 
           <form name="passCriteria" onSubmit="validateForm();">
-            <p>To get a random 12-character password, click the "Generate Password" button below.<br><br>
-            If you'd like to refine your password, complete the form below and hit "Submit" before clicking "Generate Password."</p>
+            <p>To get a random 12-character password with just numbers and lowercase letters, click the "Generate Password" button below.<br><br>
+            For a stronger password, check at least 2 of the 3 boxes below and pick a longer password length.</p>
 
             <h3>Refine Your Password</h3>
-            <p>How long would you like your password to be? (Min: 8 characters, max: 128 characters)</p>
+            <p>How long would you like your password to be? (min: 8 characters, max: 128 characters)</p>
 
             <!-- <input type="range" name="rangeInput" min="8" max="128" step="8" onchange="updateRange(this.value);" required>
 
               <input type="text" id="passLength" value="" height="10px" width="10px"></textarea>
  -->
-            <label for="length">Password Length:</label>
+            <label for="length"></label>
               <input type="number" id="length" value="12" min="8" max="128" required>
-            <br>
-
-            <p>Check at least 2 of the 3 boxes below to pick what kind of characters you'd like to be generated for your password.</p>
+            <br><br>
 
             <input type="checkbox" id="uppercase" required>
               <label for="uppercase letters">include uppercase letters</label> 
@@ -50,8 +48,8 @@
               <label for="numbers">include numbers</label> 
               <br>
 
-            <input type="submit" value="Submit">
-            <br>
+            <!-- <input type="submit" value="Submit">
+            <br> -->
 
           </form>
         </div>
